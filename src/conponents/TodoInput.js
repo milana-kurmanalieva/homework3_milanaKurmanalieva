@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './TodoInput.css'
 
 const TodoInput = (props) => {
     const [value, setValue] = useState('')

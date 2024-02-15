@@ -10,9 +10,6 @@ const App = () => {
             alert('Please print something')
         }
     }
-    const deleteTodo = (id) => {
-        setTodos(todos.filter(todo=> todo.id !== id))
-    }
     return (
         <div className="wrapper">
             <h1>Create Todo</h1>
@@ -25,10 +22,6 @@ const App = () => {
                         return(
                             <li key={el.id} >
                                 {el.text}
-                                <button onClick={(e)=>{
-                                    e.stopPropagation()
-                                    deleteTodo(el.id)
-                                }}>Delete</button>
                             </li>
                         )
                     })
